@@ -9,25 +9,25 @@ import org.junit.jupiter.api.Test;
 import calendar.CalendarBug1;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@DisplayName("Test Black Box Minimum Coverage")
+@DisplayName("Test Black Box Coverage Adjacent")
 public class TestBlackBoxCoverageAdjacent {
 
 	@Test
 	@DisplayName("TC1")
 	public void testCalend1() {
-		assertEquals("Mercoledi", CalendarBug1.calend(1,"jaunary",1980));
+		assertEquals("tuesday", CalendarBug1.calend(1,"january",1980));
 	}
 
 	@Test
 	@DisplayName("TC2")
 	public void testCalend2() {
-		assertEquals("Errore", CalendarBug1.calend(1,"jaunary",1492));
+		assertEquals("error", CalendarBug1.calend(1,"january",1492));
 	}
 
 	@Test
 	@DisplayName("TC3")
 	public void testCalend3() {
-		assertEquals("Errore", CalendarBug1.calend(1,"jaunary",2118));
+		assertEquals("error", CalendarBug1.calend(1,"january",2118));
 	}
 
 	//static analysis already makes me realize that I put a string instead of a number
@@ -46,13 +46,13 @@ public class TestBlackBoxCoverageAdjacent {
 	@Test
 	@DisplayName("TC6")
 	public void testCalend6() {
-		assertEquals("error", CalendarBug1.calend(0,"jaunary",1980));
+		assertEquals("error", CalendarBug1.calend(0,"january",1980));
 	}
 
 	@Test
 	@DisplayName("TC7")
 	public void testCalend7() {
-		assertEquals("error", CalendarBug1.calend(35,"jaunary",1980));
+		assertEquals("error", CalendarBug1.calend(35,"january",1980));
 	}
 
 	//static analysis already makes me realize that I put a string instead of a number

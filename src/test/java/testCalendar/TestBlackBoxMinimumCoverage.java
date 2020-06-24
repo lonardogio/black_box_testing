@@ -16,18 +16,21 @@ public class TestBlackBoxMinimumCoverage {
 	@DisplayName("TC1")
 	public void testCalend1() {
 		//assertEquals(expected, actual)
-		assertEquals("wednesday", CalendarBug1.calend(1,"january",1980));
+		assertEquals("tuesday", CalendarBug1.calend(1,"january",1980));
 	}
+
 	@Test
 	@DisplayName("TC2")
 	public void testCalend2() {
 		assertEquals("error", CalendarBug1.calend(0,"danuary",1492));
 	}
+
 	@Test
 	@DisplayName("TC3")
 	public void testCalend3() {
 		assertEquals("error", CalendarBug1.calend(35,"january",2118));
 	}
+
 //	@Test
 //	@DisplayName("TC4")
 //	public void testCalend3() {

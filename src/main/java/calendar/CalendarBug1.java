@@ -19,10 +19,12 @@ public class CalendarBug1 {
 
 		if (d<1 || d>31 || m==0 || a<=1582)
 			return "error";
-		Boolean bisestile= (a%4==0);
-		if (bisestile && a%100==0 && a%400!=0)
-			bisestile=false;
-		if ((m==2 && d>29)||(m==2 && d==29 && !bisestile))
+		if (d<1 || d>31 || m==0 || a>2100)
+			return "error";
+		Boolean leapYear= (a%4==0);
+		if (leapYear && a%100==0 && a%400!=0)
+			leapYear=false;
+		if ((m==2 && d>29)||(m==2 && d==29 && !leapYear))
 			return "error";
 		if ((m==4 || m==6 || m==9 || m==11) && d>30)
 			return "error";

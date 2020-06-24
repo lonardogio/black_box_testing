@@ -15,7 +15,7 @@ public class TestBlackBoxAdjacentDetailedCoverage {
 	@Test
 	@DisplayName("TC1")
 	public void testCalend1() {
-		assertEquals("wednesday", CalendarBug1.calend(1,"january",1980));
+		assertEquals("tuesday", CalendarBug1.calend(1,"january",1980));
 	}
 
 	@Test
